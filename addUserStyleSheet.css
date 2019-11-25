@@ -1,0 +1,102 @@
+.resume {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-column-gap: 45px;
+	grid-row-gap: 50px;
+	font-family:Times New Roman, Times, serif;
+}
+
+.header {
+	grid-area: 1 / 1 / 2 / 6;
+
+	color: #FFFFFF;
+	background: #2db34a;
+	padding: 1em;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+.border{
+	border: 1px solid #FFFFFF;
+	padding: 1em;
+	text-align: center;
+	margin-left: 30%;
+	margin-right: 30%;
+}
+#name,#jobTitle{
+	margin: 0;
+}
+.sideBar {
+	grid-area: 2 / 2 / 6 / 3;
+	float: left;
+	height: 900px;
+	background: #D3D3D3;
+	min-height: ;
+	min-width: ;
+}
+#resumeImage{
+	height: 190px;
+	width: 187px;
+	margin-top: 10%;
+	margin-bottom: 15%;
+	border-radius: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.personalInfo p,a{
+	padding-left: 15px;
+	padding-bottom: 10px;
+	display: inline-block;
+	margin:0px;
+	padding-top: 0px;
+}
+.personalInfo img{
+	height: 24px;
+	width: 24px;
+	padding-left: 15px;
+	display: inline-block;
+}
+.personalInfo h2{
+	padding-left: 15px;
+}
+.personalInfo hr{
+	border:none;
+	background: black;
+	height: 3.5px;
+	width: 265px;
+}
+.mainContent { 
+	grid-area: 2 / 3 / 6 / 5;
+} 
+.mainContent hr{ 
+	clear: both;
+	border:none;
+	background: #D3D3D3;
+	height: 3.5px;
+	width: 650px;
+} 
+.mainContent .years{
+	box-sizing: border-box;
+	width: 25%;
+	float: left;
+}
+.mainContent .details{
+	float: right;
+	box-sizing: border-box;
+	width: 75%;
+}
+.skill .half1{
+	box-sizing: border-box;
+	width: 50%;
+	float: left;
+}
+.skill .half2{
+	float: right;
+	box-sizing: border-box;
+	width: 50%;
+}
