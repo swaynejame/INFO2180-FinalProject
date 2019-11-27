@@ -1,8 +1,8 @@
 <?php
-$host = getenv('IP');
+$host = 'localhost';
 $username = 'admin';
-$password = password_hash('password123');
-$dbname = 'schema';
+$password = 'password123';
+$dbname = 'bugs';
 
 $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
 
