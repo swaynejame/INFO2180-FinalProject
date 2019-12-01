@@ -1,30 +1,26 @@
 <?php
 $host = 'localhost';
-$username = 'admin';
-$password = 'Password123!';
+$username = 'group';
+$password = 'password';
 $dbname = 'bugs';
 
-$conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-
-if (isset($_POST['firstname'])) {
-    $fname = $_POST['firstname'];
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    echo "Connected to $dbname at $host successfully.";
+} catch (PDOException $pe) {
+    die("Could not connect to the database $dbname :" . $pe->getMessage());
 }
-if (isset($_POST['lastname'])) {
-    $lname = $_POST['lastname'];
-}
-if (isset($_POST['email'])) {
-    $eMail = $_POST['email'];
-}
-if (isset($_POST['password'])) {
-    $passcode = password_hash($_POST['password'],PASSWORD_DEFAULT);
-}
+    
+$fname = $_POST['firstname'];
+$lname = $_POST['lastname'];
+$eMail = $_POST['email'];
+$passcode = password_hash($_POST['password'],PASSWORD_DEFAULT);
 $current_date = date("Y/m/d");
 
-//$stmt = $conn->query("INSERT INTO `users` (id, firstname, lastname, password, email, date_joined) VALUES (2, '$fname', '$lname', '$passcode' ,'$eMail', '$current_date')");
-
-//$stmt = $conn->query("SELECT * FROM users");
-//$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
-
-<?php
+$sql = "INSERT INTO users (firstname, lastname, password, email, date_joined) 
+            VALUES('$fname', '$lname', '$passcode', '$eMail', '$current_date')";
+    $conn->exec($sql);
+    
+    $stmt = $conn->query("SELECT * FROM users");
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>

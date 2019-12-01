@@ -17,10 +17,6 @@ CREATE TABLE `users`(
     PRIMARY KEY  (`id`)
 )ENGINE=MyISAM AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8mb4;
 
-
--- INSERT INTO `users` (id, firstname, lastname, password, email, date_joined)
--- VALUES (1, 'John', 'Doe', 'password123','admin@bugme.com', '2019-11-17');
-
 --
 -- Table structure for table `issues`
 --
