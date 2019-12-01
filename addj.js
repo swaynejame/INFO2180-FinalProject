@@ -3,7 +3,6 @@ function validate(){
 		var button = document.getElementById("submitButton");
 	    //Add event listener
 	    button.addEventListener("click", function(event){
-	    	var valid = false;
 	    	var xmlhttp = new XMLHttpRequest();
 	    	var firstname = document.getElementById("fname").value;
 		    var lastname = document.getElementById("lname").value;
@@ -38,6 +37,7 @@ function validate(){
 		    		var validp = true;
 		    		// document.getElementById("pass").className='null';
 		    		// document.getElementById("passcon").className='null';
+		    	//var validp = true;
 		    	}
 		    	
 		    }
@@ -49,7 +49,7 @@ function validate(){
 		    }
 		    
 		    if(email != ""){
-		    	if(email.match(passcheck)){
+		    	if(email.match(emailcheck)){
 		    		var valide = true;
 		    		// document.getElementById("email").className='null';
 		    	}
@@ -68,6 +68,7 @@ function validate(){
 			    	return false;
 			    }
 		    }
+		    
 		    
 		    if(myValid()==false){
 		    	event.preventDefault();

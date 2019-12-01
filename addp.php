@@ -54,8 +54,9 @@ if (empty($_POST["firstname"])){
     }
     else{
         $passcode = checkData($_POST["password"]);
+        $pass = password_hash($passcode,PASSWORD_DEFAULT);
         // check if e-mail address syntax is valid or not
-        if (!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/",$passcode)){
+        if (!preg_match("/^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$/",$passcode)){
             echo "Invalid password format";
         }
     }
@@ -70,9 +71,8 @@ if (empty($_POST["firstname"])){
             echo "Invalid email format";
         }
     }
-
 $sql = "INSERT INTO users (firstname, lastname, password, email, date_joined) 
-            VALUES('$fname', '$lname', '$passcode', '$eMail', '$current_date')";
+            VALUES('$fname', '$lname', '$pass', '$eMail', '$current_date')";
     $conn->exec($sql);
     
     $stmt = $conn->query("SELECT * FROM users");
