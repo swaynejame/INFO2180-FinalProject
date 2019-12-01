@@ -75,7 +75,7 @@ function validate(){
 		    }
 		    else{
 		    	event.preventDefault();
-		    	xmlhttp.open("POST", "addp.php");
+		    	xmlhttp.open("POST", "scripts/addp.php");
 		    	xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 		    	xmlhttp.send("firstname="+firstname+"&lastname="+lastname+"&email="+email+"&password="+password);
 		      
