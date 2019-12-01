@@ -8,14 +8,14 @@ USE bugs;
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users`(
-    `id` int(35)  NOT NULL auto_increment,
-    `firstname` char(35)  NOT NULL default '',
-    `lastname` char(35)  NOT NULL default '',
-    `password` char(35)  NOT NULL default '',
-    `email` varchar(255)  NOT NULL default '',
+    `id` INT AUTO_INCREMENT,
+    `firstname` VARCHAR(32),
+    `lastname` VARCHAR(32),
+    `password` VARCHAR(64),
+    `email` VARCHAR(64),
     `date_joined` date DEFAULT NULL,
-    PRIMARY KEY  (`id`)
-)ENGINE=MyISAM AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8mb4;
+    PRIMARY KEY(id)
+);
 
 --
 -- Table structure for table `issues`
@@ -23,15 +23,15 @@ CREATE TABLE `users`(
 
 DROP TABLE IF EXISTS `issues`;
 CREATE TABLE `issues` (
-    `id` int(35)  NOT NULL auto_increment,
-    `title` char(35)   NOT NULL default '',
-    `description` VARCHAR(1000)   NOT NULL default '',
-    `issueType` char(35)   NOT NULL default '',
-    `priority` varchar(255)   NOT NULL default '',
-    `status` char(35)   NOT NULL default '',
-    `assigned_to` char(35)   NOT NULL default '',
-    `created_by` char(35)   NOT NULL default '',
+    `id` INT AUTO_INCREMENT,
+    `title` VARCHAR(32),
+    `description` VARCHAR(1000),
+    `issueType` VARCHAR(32),
+    `priority` VARCHAR(32),
+    `status` VARCHAR(32),
+    `assigned_to` VARCHAR(32),
+    `created_by` VARCHAR(32),
     `created` date DEFAULT NULL,
     `updated` date DEFAULT NULL,
-    PRIMARY KEY  (`id`)
-)ENGINE=MyISAM AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8mb4;
+    PRIMARY KEY(id)
+);
