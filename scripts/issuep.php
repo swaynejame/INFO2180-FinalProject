@@ -17,6 +17,8 @@ $type = $_POST['type'];
 $priority = $_POST['priority'];
 $assigned = $_POST['email'];
 $created_date = date("Y/m/d");
+$updated_date = date("Y/m/d");
+$status = "Open";
 ?>
 <?php
 function checkData($val){
@@ -82,8 +84,8 @@ if (empty($_POST["title"])){
             echo "Invalid assignment";
         }
     }
-$sql = "INSERT INTO issues (title, description, issueType, priority, assigned_to,created) 
-            VALUES('$title', '$descrip', '$type', '$priority', '$assigned','$created_date')";
+$sql = "INSERT INTO issues (title, description, issueType, priority, status,assigned_to,created,updated) 
+            VALUES('$title', '$descrip', '$type', '$priority', $status,'$assigned','$created_date','$updated_date')";
     $conn->exec($sql);
     
     $stmt = $conn->query("SELECT * FROM issues");

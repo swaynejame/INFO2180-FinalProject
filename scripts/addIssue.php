@@ -20,7 +20,7 @@ mysqli_select_db($link,"bugs");
 			</div>
 			<div id="nav">
 				<ul>
-				  <li><a href="#home">Home</a></li>
+				  <li><a href="../scripts/dashboard.php">Home</a></li>
 				  <li><a href="../addUser.html">Add User</a></li>
 				  <li><a href="../scripts/addIssue.php">New Issue</a></li>
 				  <li><a href="#about">Logout</a></li>

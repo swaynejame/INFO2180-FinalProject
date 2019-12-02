@@ -1,0 +1,119 @@
+body{
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    
+}
+
+.addput{
+    border: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    min-width: 300px;
+    padding: 5px;
+}
+
+.bugcon{
+    width: 29px;
+    display: inline;
+    position: absolute;
+}
+
+#sub{
+    border: none;
+    background-color: rgb(43, 121, 255);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    min-width: 120px;
+    border-radius: 4px;
+}
+
+#log{
+    border: none;
+    background-color: rgb(43, 121, 255);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    min-width: 120px;
+    border-radius: 4px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+	grid-column: 1 / span 4;
+	padding-left: 35px;
+	color: white;
+	background-color: #013F34;
+}
+
+header h2{
+    padding-left: 45px; 
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.sidebar{
+    justify-content: center;
+    align-items: center;
+	background-color: #D2E4D1;
+    min-width: 200px;
+    float: left;
+    min-height: 90vh;
+    padding-top: 20px
+}
+
+.pageColor{
+	background-color: #F2FBEF;
+}
+
+#descript{
+    min-height: 100px;
+}
+
+.Home, .AddUser, .NewIssue, .Logout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	padding-left: 20%;
+	width: 80%;
+}
+
+.sidecon{
+    width: 14px;
+    padding-right: 5px;
+}
+
+.sidebar p{
+    margin: 0px;
+}
+
+@keyframes transition {
+  from {background-color: #D2E4D1;}
+  to {background-color: #B7CBB4;}
+}
+
+.hover:hover{
+	animation-name: transition;
+	animation-duration: .3s;
+	background-color: #B7CBB4;
+}
+
+.mainContent{
+    height: inherit;
+	width: inherit;
+	background-color: #F2FBEF;
+    padding-left: 25px;
+    overflow: hidden;
+    min-height: 91vh;
+}
